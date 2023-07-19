@@ -11,13 +11,19 @@
 
         {% breadcrumbs %}
 
-        <ul class="gallery-list product-list"></ul>
+        <div class="overlay-container">
+            <ul class="gallery-list product-list"></ul>
 
-        <div class="load-container">
-            <div class="load-button">
-                <div class="load-text">{{ "See more" | upper }}</div>
-                <div class="load-line hide load-line-hover"></div>
+            <div class="load-container">
+                <div class="load-button">
+                    <div class="load-text">{{ "See more" | upper }}</div>
+                    <div class="load-line hide load-line-hover"></div>
+                </div>
             </div>
+
+            <ul class="gallery-list type-list">
+                {% get_product_types %}
+            </ul>
         </div>
     </div>
 
@@ -42,7 +48,7 @@
                 counter = end - 1;
 
                 // Get new posts and add posts
-                let response = await fetch(`/api/gtprods/{{ page.id }}/${start}/${end}`)
+                let response = await fetch(`/api/gtprods/${start}/${end}/{{ page.id }}`)
                 let data = await response.json();
 
                 if (data.length == quantity) {

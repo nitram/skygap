@@ -54,12 +54,12 @@
         </div>
     </div>
 
-    {% block extra_js %}
-        <script>
-            document.querySelectorAll('.fadeimg').forEach((image) => {
-                load_image(image.dataset.img, image);
-            });
-        </script>
-    {% endblock %}
-
 {% endblock content %}
+
+{% block extra_js %}
+    <script>
+        document.querySelectorAll('.fadeimg').forEach((image) => {
+            load_image(image.dataset.img, image);
+        });
+    </script>
+{% endblock %}

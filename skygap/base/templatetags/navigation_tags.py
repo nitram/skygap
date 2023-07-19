@@ -129,19 +129,3 @@ def get_product_types(context):
         'product_types': ProductPage.objects.filter(live=True),
         'request': context['request'],
     }
-
-
-@register.inclusion_tag('includes/designs.html', takes_context=True)
-def get_designs(context):
-    return {
-        'designs': Design.objects.filter(live=True),
-        'request': context['request'],
-    }
-
-
-@register.inclusion_tag('includes/products.html', takes_context=True)
-def get_products(context, page_id):
-    return {
-        'products': Product.objects.filter(live=True, type=page_id),
-        'request': context['request'],
-    }

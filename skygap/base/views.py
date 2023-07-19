@@ -12,14 +12,23 @@ from skygap.products.models import Product, ProductImage
 
 
 # View of url: gtprods/
-def load_products(request, page_id, start, end):
-    products_data = Product.objects.filter(live=True, type=page_id)[start:end].values(
-        'id',
-        'name',
-        'type',
-        'primary_thumbnail',
-        'secondary_thumbnail',
-        'price')
+def load_products(request, start, end, page_id):
+    if page_id == 999:
+        products_data = Product.objects.filter(live=True)[start:end].values(
+            'id',
+            'name',
+            'type',
+            'primary_thumbnail',
+            'secondary_thumbnail',
+            'price')
+    else:
+        products_data = Product.objects.filter(live=True, type=page_id)[start:end].values(
+            'id',
+            'name',
+            'type',
+            'primary_thumbnail',
+            'secondary_thumbnail',
+            'price')
 
     return JsonResponse(list(products_data), safe=False)
 

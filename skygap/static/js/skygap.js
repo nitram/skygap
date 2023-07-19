@@ -20,7 +20,7 @@ function toggleMobileNavigation() {
 
 
 async function load_image(image, container) {
-  if (image !== null) {
+  if (image !== null && image !== "") {
     let response = await fetch(`/api/gtimg/${image}`);
     let data = await response.json();
     
