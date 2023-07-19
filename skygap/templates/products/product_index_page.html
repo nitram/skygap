@@ -98,7 +98,7 @@
                             ${contents.name}
                         </div>
                         <div class="gallery-text product-price upper">
-                            $${contents.price}
+                            ${contents.price == null ? 'Price not set' : '$' + contents.price}
                         </div>
                     `
 

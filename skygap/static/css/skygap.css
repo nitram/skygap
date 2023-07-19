@@ -971,6 +971,7 @@ li.has-submenu a.allow-toggle {
 
 .product > .product-name {
   font-weight: bold;
+  text-align: center;
 }
 
 @media (max-width: 758px) {
