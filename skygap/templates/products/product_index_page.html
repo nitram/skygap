@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load navigation_tags wagtailcore_tags wagtailimages_tags %}
+
+{% block content %}
+    <!-- {% include "includes/header-index.html" %} -->
+
+    <div class="section">
+        <h1 class="title">
+            Products
+        </h1>
+
+        <ul class="gallery-list type-list">
+            {% get_product_types %}
+        </ul>
+    </div>
+
+{% endblock content %}

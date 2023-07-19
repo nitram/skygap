@@ -1,0 +1,17 @@
+{% load static format_tags wagtailimages_tags %}
+
+{% for design in designs %}
+    <li class="gallery-item design" data-id="{{ design.id | design_id }}">
+        {% image design.design_images.first.image original as design_img %}
+        <div class="image-container">
+            <div class="gallery-image" style="background-image: url({{ design_img.url }})"></div>
+        </div>
+        <div class="gallery-text design-id upper">
+            <span>{{ design.id | design_id }}</span>
+            <span class="copy-icon">
+                <span></span>
+                <img src="{% static 'img/copy.png' %}">
+            </span>
+        </div>
+    </li>
+{% endfor %}

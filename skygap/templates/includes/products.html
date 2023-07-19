@@ -1,0 +1,18 @@
+{% load static format_tags wagtailimages_tags %}
+
+{% for product in products %}
+    <li class="gallery-item product" data-id="{{ product.id }}">
+        <span class="line-bottom"></span>
+        <span class="line-right"></span>
+        {% image product.primary_thumbnail original as product_img %}
+        <div class="image-container">
+            <div class="gallery-image" style="background-image: url({{ product_img.url }})"></div>
+        </div>
+        <div class="gallery-text product-name upper">
+            {{ product.name }}
+        </div>
+        <div class="gallery-text product-price upper">
+            ${{ product.price }}
+        </div>
+    </li>
+{% endfor %}
