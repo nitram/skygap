@@ -113,6 +113,7 @@
                     document.querySelector('.product-list').append(product);
 
                     resolve({
+                        'id': id,
                         'image': contents.primary_thumbnail,
                         'product': document.querySelector(`#${id} > .image-container > .gallery-image`),
                     });
