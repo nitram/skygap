@@ -66,7 +66,6 @@ html {
 }
 
 body {
-  position: relative;
   overscroll-behavior: none;
   font-family: var(--font--primary);
   min-height: 100vh;
@@ -318,7 +317,7 @@ li {
   align-items: center;
   text-align: center;
   padding-top: 80px;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
 .navigation__mobile > .navigation__items {
