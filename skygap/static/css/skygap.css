@@ -65,12 +65,7 @@ html {
   font-size: 16px;
 }
 
-html, body {
-  overflow-y: hidden;
-}
-
 body {
-  position: relative;
   overscroll-behavior: none;
   font-family: var(--font--primary);
   min-height: 100vh;
@@ -79,6 +74,7 @@ body {
 
 body.no-scroll {
   overflow-y: hidden;
+  position: fixed;
 }
 
 
