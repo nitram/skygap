@@ -69,4 +69,18 @@ document.addEventListener('DOMContentLoaded', () => {
   if (typeof loadDesign === "function") {
     loadDesign();
   }
+
+  var footer = document.querySelector("footer");
+
+  // If scrolled to bottom, load the next 20 posts
+  window.addEventListener('scroll', () => {
+    let footerPos = footer.getBoundingClientRect().bottom;
+
+    if (footerPos < (window.innerHeight + 100)) {
+      document.querySelector(`.footer .line-right`).style.height = "100%";
+      document.querySelector(`.footer .line-top`).style.width = "100%";
+    }
+  });
+
+  
 });

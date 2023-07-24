@@ -56,11 +56,15 @@
 
                 data.forEach((product) => {
                     add_product(product).then((thumbnail) => {
+                        document.querySelector(`#${thumbnail.id} .line-right`).style.height = "100%";
+
                         if (thumbnail.image !== null) {
                             load_image(thumbnail.image, thumbnail.product);
                         }
                     });
                 });
+
+
 
                 document.querySelector('.load-text').style.transform = "translateY(0)";
 
@@ -106,6 +110,7 @@
                     document.querySelector('.product-list').append(product);
 
                     resolve({
+                        'id': id,
                         'image': contents.primary_thumbnail,
                         'product': document.querySelector(`#${id} > .image-container > .gallery-image`),
                     });
