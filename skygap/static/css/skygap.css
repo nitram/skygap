@@ -66,6 +66,7 @@ html {
 }
 
 body {
+  position: relative;
   overscroll-behavior: none;
   font-family: var(--font--primary);
   min-height: 100vh;
