@@ -61,6 +61,8 @@
 
                 data.forEach((product) => {
                     add_product(product).then((thumbnail) => {
+                        document.querySelector(`#${thumbnail.id} .line-right`).style.height = "100%";
+                        
                         if (thumbnail.image !== null) {
                             load_image(thumbnail.image, thumbnail.product);
                         }
