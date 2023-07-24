@@ -2,7 +2,7 @@ from .base import *
 
 DEBUG = False
 
-ALLOWED_HOSTS = ["18.222.116.197"]
+ALLOWED_HOSTS = ["*"]
 
 try:
     from .local import *
