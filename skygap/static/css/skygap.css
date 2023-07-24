@@ -74,7 +74,7 @@ body {
 
 body.no-scroll {
   overflow-y: hidden;
-  position: fixed;
+  /* position: fixed; */
 }
 
 
@@ -318,7 +318,7 @@ li {
   align-items: center;
   text-align: center;
   padding-top: 80px;
-  overflow-y: hidden;
+  overflow-y: auto;
 }
 
 .navigation__mobile > .navigation__items {
