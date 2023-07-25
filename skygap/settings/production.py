@@ -1,8 +1,6 @@
 from .base import *
 from decouple import config
 
-import os
-
 DEBUG = False
 
 # SECURITY WARNING: keep the secret key used in production secret!
