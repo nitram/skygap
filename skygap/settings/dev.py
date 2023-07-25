@@ -1,10 +1,12 @@
 from .base import *
 
+from decouple import config
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-y($(t*f()=ry3uma=&$diyyd5&yvjq6=a)j0=b=_pu=d9qz)gm"
+SECRET_KEY = config('SECRET')
 
 # SECURITY WARNING: define the correct hosts in production!
 ALLOWED_HOSTS = ["*"]
