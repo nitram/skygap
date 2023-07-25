@@ -6,3 +6,4 @@ skygap/settings/local.py
 skygapdb
 testmedia
 media
+static
