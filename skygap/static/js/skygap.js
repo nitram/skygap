@@ -25,7 +25,7 @@ async function load_image(image, container) {
     let data = await response.json();
     
     let img = new Image();
-    let url = `/media/${data.file}`;
+    let url = `${media_prefix}${data.file}`;
 
     img.onload = function() {
       container.style.backgroundImage = `url(${url})`;
