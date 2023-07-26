@@ -5,5 +5,5 @@ __pycache__
 skygap/settings/local.py
 skygapdb
 testmedia
-media
-static
+collectstatic
+skygap.log
