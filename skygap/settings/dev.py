@@ -10,10 +10,9 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: define the correct hosts in production!
 ALLOWED_HOSTS = ["*"]
 
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+MEDIA_URL = "https://%s/" % AWS_S3_CUSTOM_DOMAIN
 
-AWS_STORAGE_BUCKET_NAME = "skygap-bucket"
-AWS_S3_CUSTOM_DOMAIN = "%s.s3.amazonaws.com" % AWS_STORAGE_BUCKET_NAME
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 
 try:
