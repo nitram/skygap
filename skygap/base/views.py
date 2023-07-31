@@ -12,7 +12,7 @@ from skygap.products.models import Product, ProductImage
 
 
 # View of url: gtprods/
-def load_products(request, start, end, page_id):
+def load_products(request, start, end, page_id=999):
     if page_id == 999:
         products_data = Product.objects.filter(live=True)[start:end].values(
             'id',

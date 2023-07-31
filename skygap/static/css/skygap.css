@@ -106,7 +106,7 @@ li {
   background-color: #FBA81A;
 }
 
-.cta:hover {
+.cta:has(a:hover) {
   background-color: #FD9500;
   transition: 0.2s all ease-in-out;
 }
@@ -497,14 +497,9 @@ li {
 }
 
 .order-button {
-  background-color: #FBA81A;
   text-align: center;
   padding: 15px 10px;
   border: 1px solid black;
-}
-
-.order-button:hover {
-  background-color: ;
 }
 
 .order-button > a {

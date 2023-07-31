@@ -5,7 +5,7 @@ const mobileNavigationToggle = navigation.querySelector(
   '[data-mobile-navigation-toggle]',
 );
 
-
+// Mobile Navigation
 function toggleMobileNavigation() {
   if (mobileNavigation.hidden) {
     body.classList.add('no-scroll');
@@ -19,6 +19,7 @@ function toggleMobileNavigation() {
 }
 
 
+// Load Image
 async function load_image(image, container) {
   if (image !== null && image !== "") {
     let response = await fetch(`/api/gtimg/${image}`);
@@ -41,8 +42,8 @@ async function load_image(image, container) {
   }
 }
 
-var copied = false;
 
+// Main: Funciton calls
 document.addEventListener('DOMContentLoaded', () => {
 
   mobileNavigationToggle.addEventListener('click', () => {
@@ -51,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (typeof loadProduct === "function") {
     loadProduct();
+    console.log("loading products");
 
     let loadBtn = document.querySelector('.load-button');
     loadBtn.addEventListener('click', (event) => {

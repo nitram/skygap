@@ -51,11 +51,11 @@
         <script type="text/javascript">
             var media_prefix = "{% get_media_prefix %}"
         </script>
-        
-        <script type="text/javascript" src="{% static 'js/skygap.js' %}"></script>
 
         {% block extra_js %}
             {# Override this in templates to add extra javascript #}
         {% endblock %}
+        
+        <script type="text/javascript" src="{% static 'js/skygap.js' %}"></script>
     </body>
 </html>
