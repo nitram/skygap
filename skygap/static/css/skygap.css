@@ -77,6 +77,16 @@ body.no-scroll {
   position: fixed;
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+}
 
 [hidden] {
   display: none !important;
@@ -89,6 +99,29 @@ h1, h2, h3, h4, h5, h6, p {
 
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
+}
+
+/* Link and their hover effects */
+a, .hoverline {
+  position: relative;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.hoverline:before, .presentation > a:before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  width: 0%;
+  height: 1px;
+  background-color: #000;
+  transition: 0.2s all ease-in-out;
+}
+
+a:hover .hoverline:before {
+  width: 100%;
 }
 
 li {
@@ -108,7 +141,7 @@ li {
 
 .cta:has(a:hover) {
   background-color: #FD9500;
-  transition: 0.2s all ease-in-out;
+  transition: 0.1s all ease-in-out;
 }
 
 .fadeimg {
@@ -475,14 +508,22 @@ li {
     padding: 20px;
   }
 
+  .navigation__items > li > a:before {
+    bottom: 15px;
+  }
+
+  .navigation__items > li > a:hover::before {
+    width: calc(100% - 40px);
+  }
+
   /* .navigation__items > li:first-child {
     padding: 0 20px;
   } */
 
-  .navigation__items > li:hover,
+  /* .navigation__items > li:hover,
   .navigation__items > li > a:hover {
     text-decoration: underline;
-  }
+  } */
 }
 
 /* N.B. We're overriding Bootstrap's default nav styles here,
@@ -1122,5 +1163,3 @@ li.has-submenu a.allow-toggle {
 .load-button:hover .load-line-hover {
   width: 100%;
 }
-
-

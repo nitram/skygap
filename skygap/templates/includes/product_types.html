@@ -7,7 +7,9 @@
             <div class="image-container">
                 <div class="gallery-image" style="background-image: url({{ product_img.url }})"></div>
             </div>
-            <div class="gallery-text type-link upper">{{ type }}</div>
+            <div class="gallery-text type-link upper">
+                <span class="hoverline">{{ type }}</span>
+            </div>
         </a>
     </li>
 {% endfor %}

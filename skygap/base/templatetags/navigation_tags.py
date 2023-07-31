@@ -1,5 +1,4 @@
 from django import template
-from django.db.models import F
 
 from wagtail.models import Page, Site
 

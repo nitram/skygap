@@ -52,7 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (typeof loadProduct === "function") {
     loadProduct();
-    console.log("loading products");
 
     let loadBtn = document.querySelector('.load-button');
     loadBtn.addEventListener('click', (event) => {

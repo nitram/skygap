@@ -12,7 +12,7 @@
         <ul class="gallery-list design-list"></ul>
     </div>
 
-    {% block extra_js %}
+    {% block js_functions %}
         <script>
             var copyImg = "{% static 'img/copy.png' %}"
             var checkImg = "{% static 'img/check.png' %}"
@@ -115,5 +115,5 @@
                 });
             }
         </script>
-    {% endblock %}
+    {% endblock js_functions %}
 {% endblock content %}
