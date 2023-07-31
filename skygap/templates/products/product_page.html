@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load navigation_tags wagtailcore_tags wagtailimages_tags %}
+{% load navigation_tags static wagtailcore_tags wagtailimages_tags %}
 
 {% block content %}
     <!-- {% include "includes/header-index.html" %} -->
@@ -32,7 +32,7 @@
 
     {% block js_functions %}
         <script>
-            var pageId = {{page.id}};
+            var pageId = {{ page.id }};
         </script>
 
         <script type="text/javascript" src="{% static 'js/loadproducts.js' %}"></script>
