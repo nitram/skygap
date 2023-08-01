@@ -120,8 +120,10 @@ a:hover {
   transition: 0.2s all ease-in-out;
 }
 
-a:hover .hoverline:before {
-  width: 100%;
+@media (min-width: 1150px) {
+  a:hover .hoverline:before {
+    width: 100%;
+  }
 }
 
 li {
@@ -139,9 +141,11 @@ li {
   background-color: #FBA81A;
 }
 
-.cta:has(a:hover) {
-  background-color: #FD9500;
-  transition: 0.1s all ease-in-out;
+@media (min-width: 1150px) {
+  .cta:has(a:hover) {
+    background-color: #FD9500;
+    transition: 0.1s all ease-in-out;
+  }
 }
 
 .fadeimg {
