@@ -196,7 +196,7 @@ WAGTAILIMAGES_MAX_UPLOAD_SIZE = 20 * 1024 * 1024  # 20MB
 
 # Override the maximum number of pixels an image can have
 # https://docs.wagtail.org/en/stable/reference/settings.html#wagtailimages-max-image-pixels
-WAGTAILIMAGES_MAX_IMAGE_PIXELS = 256000000  # 256 megapixels
+WAGTAILIMAGES_MAX_IMAGE_PIXELS = 128000000  # 256 megapixels
 
 # settings.py
 LOGGING = {
