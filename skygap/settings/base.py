@@ -190,6 +190,14 @@ WAGTAILSEARCH_BACKENDS = {
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
 WAGTAILADMIN_BASE_URL = "http://example.com"
 
+# Override the maximum upload size for images (in bytes)
+# https://docs.wagtail.org/en/stable/reference/settings.html#wagtailimages-max-upload-size
+WAGTAILIMAGES_MAX_UPLOAD_SIZE = 20 * 1024 * 1024  # 20MB
+
+# Override the maximum number of pixels an image can have
+# https://docs.wagtail.org/en/stable/reference/settings.html#wagtailimages-max-image-pixels
+WAGTAILIMAGES_MAX_IMAGE_PIXELS = 256000000  # 256 megapixels
+
 # settings.py
 LOGGING = {
     'version': 1,
