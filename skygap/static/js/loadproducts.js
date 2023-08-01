@@ -70,12 +70,15 @@ function add_product(contents) {
                 <div class="gallery-image fadeimg"></div>
             </div>
 
-            <div class="gallery-text product-name upper">
-                ${contents.name}
+            <div class="gallery-text">
+                <div class="product-name upper">
+                    ${contents.name}
+                </div>
+                <div class="product-price">
+                    ${contents.price == null ? '<span>Price</span>' + 'N/A' : '<span>Starting at</span>' + '$' + contents.price}
+                </div>
             </div>
-            <div class="gallery-text product-price">
-                ${contents.price == null ? '<span>Price</span>' + 'N/A' : '<span>Starting at</span>' + '$' + contents.price}
-            </div>
+            
         `
 
         // Add post to DOM

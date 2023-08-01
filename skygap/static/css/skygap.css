@@ -1032,23 +1032,28 @@ li.has-submenu a.allow-toggle {
 }
 
 .product > .gallery-text {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; */
   padding: 10px;
 }
 
-.product > .product-name {
+.product > .gallery-text > .product-name {
   font-weight: bold;
   text-align: center;
 }
 
-.product > .product-price {
+.product > .gallery-text > .product-price {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-weight: bold;
+  padding: 10px;
 }
 
-.product > .product-price > span {
+.product > .gallery-text > .product-price > span {
   font-size: 0.8rem;
   font-weight: normal;
 }
