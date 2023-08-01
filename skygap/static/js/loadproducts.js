@@ -74,7 +74,7 @@ function add_product(contents) {
                 ${contents.name}
             </div>
             <div class="gallery-text product-price">
-                ${contents.price == null ? 'Price not set' : '$' + contents.price}
+                <span>Starting at </span>${contents.price == null ? 'N/A' : '$' + contents.price}
             </div>
         `
 

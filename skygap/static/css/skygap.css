@@ -1038,6 +1038,15 @@ li.has-submenu a.allow-toggle {
   text-align: center;
 }
 
+.product > .product-price {
+  font-size: 1.2rem;
+}
+
+.product > .product-price > span {
+  font-size: 0.8rem;
+  margin-right: 10px;
+}
+
 @media (max-width: 758px) {
   .product-list {
     margin: 0 15px;

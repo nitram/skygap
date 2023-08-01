@@ -78,21 +78,28 @@ class Product(DraftStateMixin, RevisionMixin, ClusterableModel):
         null=True,
         decimal_places=2,
         max_digits=6,
-        verbose_name="Price ($)")
+        verbose_name="Starting Price ($)")
     
-    def main_image(self):
-        first_image = self.product_images.first()
-        if first_image:
-            return first_image.image
-        else:
-            return None
+    # emb_price = models.DecimalField(
+    #     blank=True,
+    #     null=True,
+    #     decimal_places=2,
+    #     max_digits=6,
+    #     verbose_name="Embroidery Price ($)")
+    
+    # def main_image(self):
+    #     first_image = self.product_images.first()
+    #     if first_image:
+    #         return first_image.image
+    #     else:
+    #         return None
     
     panels = [
         FieldPanel("name"),
         FieldPanel("type"),
         FieldPanel("primary_thumbnail"),
-        FieldPanel("secondary_thumbnail"),
-        InlinePanel("product_images", label="Product Images"),
+        # FieldPanel("secondary_thumbnail"),
+        # InlinePanel("product_images", label="Product Images"),
         # MultiFieldPanel(
         #     [
         #         FieldRowPanel(
@@ -103,7 +110,10 @@ class Product(DraftStateMixin, RevisionMixin, ClusterableModel):
         #         ),
         #     ], heading="Color and Sizing"
         # ),
+
+        # InlinePanel("product_prices", label="Product Prices"),
         FieldPanel("price"),
+        # FieldPanel("emb_price"),
     ]
 
     def __str__(self):
@@ -140,6 +150,18 @@ class Color(DraftStateMixin, RevisionMixin, ClusterableModel):
         return self.color
     
 
+# @register_snippet
+# class PriceType(DraftStateMixin, RevisionMixin, ClusterableModel):
+#     price_type = models.CharField(max_length=254)
+
+#     panels = [
+#         FieldPanel("price_type"),
+#     ]
+
+#     def __str__(self):
+#         return self.price_type
+    
+
 # Product Images
 class ProductImage(Orderable):
     parent = ParentalKey(
@@ -160,3 +182,35 @@ class ProductImage(Orderable):
     panels = [
         FieldPanel('image'),
     ]
+
+
+# class ProductPrice(Orderable):
+#     parent = ParentalKey(
+#         Product,
+#         blank=True,
+#         null=True,
+#         on_delete=models.SET_NULL,
+#         related_name='product_prices'
+#     )
+#     types = models.ForeignKey(
+#         "products.PriceType",
+#         blank=True,
+#         null=True,
+#         on_delete=models.CASCADE,
+#     )
+#     price = models.DecimalField(
+#         blank=True,
+#         null=True,
+#         decimal_places=2,
+#         max_digits=6,
+#         verbose_name="Price ($)"
+#     )
+
+#     panels = [
+#         FieldRowPanel(
+#             [
+#                 FieldPanel("types", widget=forms.Select),
+#                 FieldPanel("price"),
+#             ]
+#         ),
+#     ]
