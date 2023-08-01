@@ -192,7 +192,7 @@ WAGTAILADMIN_BASE_URL = "http://example.com"
 
 # Override the maximum upload size for images (in bytes)
 # https://docs.wagtail.org/en/stable/reference/settings.html#wagtailimages-max-upload-size
-WAGTAILIMAGES_MAX_UPLOAD_SIZE = 20 * 1024 * 1024  # 20MB
+WAGTAILIMAGES_MAX_UPLOAD_SIZE = 10 * 1024 * 1024  # 20MB
 
 # Override the maximum number of pixels an image can have
 # https://docs.wagtail.org/en/stable/reference/settings.html#wagtailimages-max-image-pixels
