@@ -1032,10 +1032,11 @@ li.has-submenu a.allow-toggle {
 }
 
 .product > .gallery-text {
-  /* display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between; */
+  justify-content: space-between;
+  flex-grow: 1;
   padding: 10px;
 }
 
