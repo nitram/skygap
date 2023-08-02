@@ -124,3 +124,21 @@ class Copyright(DraftStateMixin, RevisionMixin, models.Model):
     def __str__(self):
         return self.text
     
+
+@register_snippet
+class NotFound(DraftStateMixin, RevisionMixin, models.Model):
+    image = models.ForeignKey(
+        'wagtailimages.Image',
+        null=True,
+        blank=True, 
+        on_delete=models.SET_NULL,
+        related_name='+',
+        help_text="404 Image"
+    )
+
+    panels = [
+        FieldPanel("image")
+    ]
+
+    def __str__(self):
+        return self.image.title

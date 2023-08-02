@@ -63,15 +63,22 @@ button:active {
 
 
 /* Main */
+html, body {
+  min-height: 100vh;
+}
+
 html {
   font-size: 16px;
 }
 
 body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   overscroll-behavior: none;
   font-family: var(--font--primary);
-  min-height: 100vh;
   background: var(--white);
+  padding-bottom: 250px;
 }
 
 body.no-scroll {
@@ -106,6 +113,9 @@ h1, h2, h3, h4, h5, h6 {
 /* Link and their hover effects */
 a, .hoverline {
   position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--dark);
 }
 
 a:hover {
@@ -274,6 +284,10 @@ li {
 
 
 /* Footer */
+.footer {
+  position:absolute;
+  bottom: 0;
+}
 .footer .row:first-child .line-top {
   width: 0%;
 }
@@ -493,7 +507,6 @@ li {
   font-size: 1rem;
   line-height: 1.55;
   text-align: center;
-  text-transform: uppercase;
 }
 
 @media (min-width: 1150px) {
@@ -553,7 +566,6 @@ li {
   display: block;
   width: 150px;
   color: black;
-  text-transform: uppercase;
   text-underline-offset: 5px;
   transition: 0.1s all ease-in;
 }
@@ -1185,4 +1197,22 @@ li.has-submenu a.allow-toggle {
 
 .load-button:hover .load-line-hover {
   width: 100%;
+}
+
+.notfound {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.notfound > .image-container {
+  height: 350px;
+  width: 350px;
+}
+
+.notfound > h1 {
+  font-size: 2rem;
+  font-weight: bold;
 }

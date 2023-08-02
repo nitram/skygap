@@ -7,6 +7,7 @@ from django.http import JsonResponse
 
 from wagtail.images.models import Image
 
+from skygap.base.models import NotFound
 from skygap.designs.models import Design
 from skygap.products.models import Product, ProductImage
 
@@ -58,6 +59,14 @@ def load_product_images(request, product_id):
 # View of url: gtimg/
 def load_image(request, image_id):
     return JsonResponse(get_image(image_id), safe=False)
+
+
+# Load 404 Page image
+def load_404(request):
+    image = NotFound.objects.order_by('?').first()
+    image_id = {'id' : image.image.id}
+
+    return JsonResponse(image_id, safe=False)
 
 
 # Return image data of certain image id

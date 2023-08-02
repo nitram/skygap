@@ -43,6 +43,18 @@ async function load_image(image, container) {
 }
 
 
+// Footer lines animation
+function footerAnimation() {
+  let footer = document.querySelector("footer");
+  let footerPos = footer.getBoundingClientRect().bottom;
+
+  if (footerPos < (window.innerHeight + 100)) {
+    document.querySelector(`.footer .line-right`).style.height = "100%";
+    document.querySelector(`.footer .line-top`).style.width = "100%";
+  }
+}
+
+
 // Main: Funciton calls
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -67,21 +79,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Load Designs on design page
   if (typeof loadDesign === "function") {
     loadDesign();
   }
 
-  var footer = document.querySelector("footer");
+  // Load 404 page when page not found
+  if (typeof load404 === "function") {
+    load404();
+  }
+
+  footerAnimation();
 
   // If scrolled to bottom, load the next 20 posts
   window.addEventListener('scroll', () => {
-    let footerPos = footer.getBoundingClientRect().bottom;
-
-    if (footerPos < (window.innerHeight + 100)) {
-      document.querySelector(`.footer .line-right`).style.height = "100%";
-      document.querySelector(`.footer .line-top`).style.width = "100%";
-    }
+    footerAnimation();
   });
-
-  
 });
