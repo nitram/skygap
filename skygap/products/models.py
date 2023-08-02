@@ -120,34 +120,34 @@ class Product(DraftStateMixin, RevisionMixin, ClusterableModel):
         return self.name
     
 
-@register_snippet
-class Size(DraftStateMixin, RevisionMixin, ClusterableModel):
-    size = models.CharField(max_length=5)
-    description = models.CharField(max_length=254)
+# @register_snippet
+# class Size(DraftStateMixin, RevisionMixin, ClusterableModel):
+#     size = models.CharField(max_length=5)
+#     description = models.CharField(max_length=254)
 
-    panels = [
-        FieldPanel("size"),
-        FieldPanel("description"),
-    ]
+#     panels = [
+#         FieldPanel("size"),
+#         FieldPanel("description"),
+#     ]
 
-    def __str__(self):
-        return self.size
+#     def __str__(self):
+#         return self.size
     
 
-@register_snippet
-class Color(DraftStateMixin, RevisionMixin, ClusterableModel):
-    color = models.CharField(blank=True, null=True, max_length=254)
-    hexcode = models.CharField(blank=True, null=True, max_length=7)
+# @register_snippet
+# class Color(DraftStateMixin, RevisionMixin, ClusterableModel):
+#     color = models.CharField(blank=True, null=True, max_length=254)
+#     hexcode = models.CharField(blank=True, null=True, max_length=7)
 
-    panels = [
-        FieldPanel("color"),
-        FieldPanel("hexcode"),
-    ]
+#     panels = [
+#         FieldPanel("color"),
+#         FieldPanel("hexcode"),
+#     ]
 
-    def __str__(self):
-        if not self.color:
-            return self.hexcode
-        return self.color
+#     def __str__(self):
+#         if not self.color:
+#             return self.hexcode
+#         return self.color
     
 
 # @register_snippet
