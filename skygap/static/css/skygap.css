@@ -351,14 +351,15 @@ li {
 
 /* Main menu */
 .header > .container {
+  position: absolute;
   min-width: 100vw;
   background-color: var(--white);
+  z-index: 5;
 }
 
 @media (min-width: 1150px) {
   .header > .container {
     position: fixed;
-    z-index: 5;
   }
 }
 
