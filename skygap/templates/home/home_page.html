@@ -9,50 +9,52 @@
 {% block content %}
 
     {% image page.banner original as banner_img %}
-    <div class="container content margin-bottom">
+    <div class="container homepage">
         <div class="slideshow fadeimg" data-img= {{ banner_img.image.id }}>
         </div>
 
-        <div class="intro-section margin-top padding-top padding-bottom">
-            <div class="intro">
-                <div class="intro__information margin-right">
-                    <div class="intro__title">{{ page.introheader }}</div>
-                    <div class="intro__subheader">{{ page.subheader }}</div>
-                    <span></span>
+        <div class="home-content padding-top padding-bottom">
+            <div class="intro-section padding-top padding-bottom">
+                <div class="intro">
+                    <div class="intro__information margin-right">
+                        <div class="intro__title">{{ page.introheader }}</div>
+                        <div class="intro__subheader">{{ page.subheader }}</div>
+                        <span></span>
+        
+                        <div class="intro__description">{{ page.description | richtext }}</div>
+                        <div class="order-button cta">
+                            <a href="https://smccd-czqfp.formstack.com/forms/gap_form_22" target="_blank">
+                                <span class="hoverline">Order</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="intro__images margin-left">
+                        <div class="row">
+                            <div class="col">
+                                {% image page.square_image_left original as squareleft %}
+                                <div class="intro-image squareleft fadeimg" data-img = {{ squareleft.image.id }}></div>
+                            </div>
+                            <div class="col margin-left">
+                                {% image page.square_image_right original as squareright %}
+                                <div class="intro-image squareright fadeimg" data-img= {{ squareright.image.id }}></div>
+                            </div>
+                        </div>
+                        <div class="row margin-top">
+                            {% image page.landscape_image original as landscape %}
+                            <div class="intro-image landscape fadeimg" data-img={{ landscape.image.id }}></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
     
-                    <div class="intro__description">{{ page.description | richtext }}</div>
-                    <div class="order-button cta">
-                        <a href="https://smccd-czqfp.formstack.com/forms/gap_form_22" target="_blank">
-                            <span class="hoverline">Order</span>
-                        </a>
-                    </div>
+            <div class="product-section margin-top">
+                <div class="title">
+                    {{ "Products" | upper }}
                 </div>
-                <div class="intro__images margin-left">
-                    <div class="row">
-                        <div class="col">
-                            {% image page.square_image_left original as squareleft %}
-                            <div class="intro-image squareleft fadeimg" data-img = {{ squareleft.image.id }}></div>
-                        </div>
-                        <div class="col margin-left">
-                            {% image page.square_image_right original as squareright %}
-                            <div class="intro-image squareright fadeimg" data-img= {{ squareright.image.id }}></div>
-                        </div>
-                    </div>
-                    <div class="row margin-top">
-                        {% image page.landscape_image original as landscape %}
-                        <div class="intro-image landscape fadeimg" data-img={{ landscape.image.id }}></div>
-                    </div>
-                </div>
+                <ul class="gallery-list type-list">
+                    {% get_product_types %}
+                </ul>
             </div>
-        </div>
-
-        <div class="product-section margin-top">
-            <div class="title">
-                {{ "Products" | upper }}
-            </div>
-            <ul class="gallery-list type-list">
-                {% get_product_types %}
-            </ul>
         </div>
     </div>
 

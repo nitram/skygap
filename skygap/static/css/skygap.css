@@ -78,7 +78,6 @@ body {
   overscroll-behavior: none;
   font-family: var(--font--primary);
   background: var(--white);
-  padding-bottom: 250px;
 }
 
 body.no-scroll {
@@ -284,8 +283,17 @@ li {
 
 
 /* Footer */
+.footer-container {
+  position: relative;
+  background-color: var(--white);
+  min-height: 250px;
+  margin-top: auto;
+}
+
 .footer {
-  position:absolute;
+  position: absolute;
+  z-index: 1;
+  background-color: var(--white);
   bottom: 0;
 }
 .footer .row:first-child .line-top {
@@ -704,16 +712,25 @@ li.has-submenu a.allow-toggle {
 
 
 /* Homepage */
-.content {
+.homepage {
   min-height: 80vh;
 }
 
 .slideshow {
-  background-attachment: fixed;
+  position: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 80vh;
+  width: 100%;
+  z-index: 0;
+}
+
+.home-content {
+  position: relative;
+  background-color: var(--white);
+  z-index: 1;
+  margin-top: 80vh;
 }
 
 .intro {
