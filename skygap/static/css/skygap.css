@@ -65,6 +65,7 @@ button:active {
 /* Main */
 html, body {
   min-height: 100vh;
+  overscroll-behavior-y: none;
 }
 
 html {
@@ -75,7 +76,6 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  overscroll-behavior: none;
   font-family: var(--font--primary);
   background: var(--white);
 }
