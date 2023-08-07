@@ -161,7 +161,7 @@ li {
 
 .fadeimg {
   opacity: 0;
-  transition: 1s all ease-in-out;
+  transition: 1s opacity ease-in-out;
 }
 
 .line-box {

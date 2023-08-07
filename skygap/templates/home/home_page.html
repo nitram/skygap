@@ -60,6 +60,19 @@
 
 {% endblock content %}
 
+{% block js_functions %}
+    <script>
+        function slideshowScrollEffect() {
+            let body = document.querySelector("body");
+            let slideshow = document.querySelector(".slideshow");
+            let bodyPos = body.getBoundingClientRect().top;
+
+            console.log(bodyPos);
+            slideshow.style.top = `${bodyPos / 5}px`;
+        }
+    </script>
+{% endblock %}
+
 {% block extra_js %}
     <script>
         document.querySelectorAll('.fadeimg').forEach((image) => {
