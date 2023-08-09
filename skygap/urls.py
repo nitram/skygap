@@ -9,8 +9,8 @@ from wagtail.documents import urls as wagtaildocs_urls
 from skygap.search import views as search_views
 
 urlpatterns = [
-    path("django-admin/", admin.site.urls),
-    path("admin/", include(wagtailadmin_urls)),
+    path("djad/", admin.site.urls),
+    path("login/", include(wagtailadmin_urls), name="wagtail_login"),
     path("documents/", include(wagtaildocs_urls)),
     path("search/", search_views.search, name="search"),
     path("api/", include("skygap.base.urls")),
