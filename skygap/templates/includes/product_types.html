@@ -1,4 +1,4 @@
-{% load wagtailimages_tags %}
+{% load static wagtailimages_tags %}
 
 {% for type in product_types %}
     <li class="gallery-item type">
@@ -13,3 +13,13 @@
         </a>
     </li>
 {% endfor %}
+<li class="gallery-item type">
+    <a href="/products">
+        <div class="image-container">
+            <div class="gallery-image" style="background-image: url({% static 'img/all_products.png' %})"></div>
+        </div>
+        <div class="gallery-text type-link upper">
+            <span class="hoverline">All</span>
+        </div>
+    </a>    
+</li>
