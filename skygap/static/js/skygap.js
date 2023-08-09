@@ -92,10 +92,10 @@ document.addEventListener('DOMContentLoaded', () => {
   footerAnimation();
 
   // If scrolled to bottom, load the next 20 posts
-  if (typeof slideshowScrollEffect === "function") {
+  if (typeof parallexScrollEffect === "function") {
     window.addEventListener('scroll', () => {
       footerAnimation();
-      slideshowScrollEffect();
+      parallexScrollEffect();
     });
   } else {
     window.addEventListener('scroll', () => {
