@@ -935,6 +935,12 @@ li.has-submenu a.allow-toggle {
   text-underline-offset: 5px;
 }
 
+@media (max-width: 1149px) {
+  .type-list {
+    margin: 20px 40px;
+  }
+}
+
 @media (max-width: 758px) {
   .type-list {
     margin: 20px 20px;
