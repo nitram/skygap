@@ -69,19 +69,20 @@
             console.log(bodyPos);
 
             let slideshow = document.querySelector(".slideshow");
-
             slideshow.style.top = `${bodyPos / 4}px`;
 
-            let squareLeft = document.querySelector(".intro-image.squareleft");
-            let squareRight = document.querySelector(".intro-image.squareright");
-            let landscape = document.querySelector(".intro-image.landscape");
+            if (window.innerWidth >= 1150) {
+                let squareLeft = document.querySelector(".intro-image.squareleft");
+                let squareRight = document.querySelector(".intro-image.squareright");
+                let landscape = document.querySelector(".intro-image.landscape");
 
-            let checkpoint = 150
+                let checkpoint = 150
 
-            if (bodyPos < -checkpoint) {
-                squareLeft.style.transform = `translateY(${(bodyPos + checkpoint) / 4}px)`;
-                squareRight.style.transform = `translateY(${(bodyPos + checkpoint) / 5}px)`;
-                landscape.style.transform = `translateY(${(bodyPos + checkpoint) / 6}px)`;
+                if (bodyPos < -checkpoint) {
+                    squareLeft.style.transform = `translateY(${(bodyPos + checkpoint) / 4}px)`;
+                    squareRight.style.transform = `translateY(${(bodyPos + checkpoint) / 5}px)`;
+                    landscape.style.transform = `translateY(${(bodyPos + checkpoint) / 6}px)`;
+                }
             }
         }
     </script>
