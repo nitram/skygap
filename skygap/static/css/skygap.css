@@ -995,7 +995,8 @@ li.has-submenu a.allow-toggle {
 }
 
 .copy-icon > img {
-  height: 100%;
+  width: 16px;
+  height: 16px;
 }
 
 @media (min-width: 1150px) {
