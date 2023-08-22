@@ -186,11 +186,11 @@ li {
   margin-bottom: 20px;
 }
 
-.overlay-container {
+/* .overlay-container {
   position: relative;
   z-index: 10;
   background-color: white;
-}
+} */
 
 .padding-left {
   padding-left: 20px;
@@ -964,6 +964,12 @@ li.has-submenu a.allow-toggle {
 .design-list {
   padding: 0 40px;
   margin-bottom: 40px;
+}
+
+.overlay-container {
+  position: relative;
+  z-index: 10;
+  background-color: white;
 }
 
 .design {

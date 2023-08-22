@@ -11,20 +11,18 @@
 
         {% breadcrumbs %}
 
-        <div class="overlay-container">
-            <ul class="gallery-list product-list"></ul>
+        <ul class="gallery-list product-list"></ul>
 
-            <div class="load-container">
-                <div class="load-button">
-                    <div class="load-text">{{ "See more" | upper }}</div>
-                    <div class="load-line hide load-line-hover"></div>
-                </div>
+        <div class="load-container">
+            <div class="load-button">
+                <div class="load-text">{{ "See more" | upper }}</div>
+                <div class="load-line hide load-line-hover"></div>
             </div>
-
-            <ul class="gallery-list type-list">
-                {% get_product_types %}
-            </ul>
         </div>
+
+        <ul class="gallery-list type-list">
+            {% get_product_types %}
+        </ul>
     </div>
 
 
